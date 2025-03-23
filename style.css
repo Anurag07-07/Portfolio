@@ -164,3 +164,19 @@ html, body{
   font-weight: 450;
 }
 
+#nav-part1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#nav-part1 h3{
+  font-size: 2vw;
+  margin-left: -1.5vw;
+  font-weight: 200;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: "Pacifico", cursive;
+  z-index: 999;
+}
+
