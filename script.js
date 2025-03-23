@@ -41,15 +41,49 @@ tl.from("#page1",{
   delay: 0.2, 
   y:1600,
   opacity: 0,
-  duration: 0.5,
+  duration: 0.6,
   ease: Power4,
 })
 
 tl.to('#loader',{
   display: 'none',
 })
+tl.from('#nav',{
+  opacity: 0,
+})
+tl.from(".hero h1",{
+  y:100,
+  stagger: 0.2,
+  duration: 0.5,
+  ease: Power4,
+})
   
 }
+
 loadingAnimation()
 
+const language = document.querySelector('#language')
 
+const languageArray = ['JS','C++','JAVA','RUST','TS']
+setInterval(()=>{
+  const randomLanguage = languageArray[Math.floor(Math.random()*languageArray.length)]
+  language.innerHTML = randomLanguage
+},1000)
+
+
+
+function cursorAnimation(params) {
+  document.addEventListener('mousemove',(e)=>{
+    gsap.to('#crsr',{
+      left:e.x,
+      top:e.y,
+      duration:0.5,
+      ease:Power2
+    })
+  })
+  
+  Shery.makeMagnet("#nav-part2 h3");
+    
+}
+
+cursorAnimation()
